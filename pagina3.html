@@ -5,11 +5,24 @@
 <link rel="stylesheet" href="css/estilo.css">	
 
 <title>EJEMPLO MAQUETACIÓN EN HTML5</title>
-<!--
+
 <script>
+   
     alert("Método #1: Desde Head!");
+   
+  //Esta función permite convertir una cadena en formato JSON en una variable Javascript 
+  //que contiene la representación del valor de esa cadena.
+  /* var objeto = JSON.parse('[{"nombre": "juan", "edad": 33, "casado": false},{"nombre": "luciana", "edad": 35, "casado": false}]');
+ console.info(objeto);  
+  console.table(objeto);  
+  console.log(objeto[0].nombre);
+    objeto.forEach((persona,index) =>{
+        console.log(persona.nombre);
+    });
+*/
+
 </script>
--->
+
  <style>
         img{
             transition: all 0.2s;
@@ -37,14 +50,31 @@
         <section>
             
             <figure>
-                    <img  class="preparar efecto" src="img/top-lenguajes-programacion-2021.jpg" width="200" height="200" alt="foto"  />
+                    <img class="preparar efecto" src="img/top-lenguajes-programacion-2021.jpg" width="200" height="200" alt="foto"  />
                     <figcaption>Figura: descipción foto</figcaption>
             </figure>
             <button class="hazClic">Clic Aquí</button>
             <p class="ejemplo">Hola</p>
- 
-        </section>
+            <button type="button" onclick="alert('Esto es un cuadro de alerta')">Probar alerta</button>
 
+
+        </section>
+        <section>
+            
+            
+            <div id="test" class="marco3"> Donec ligula arcu, sagittis lacinia nibh et, consequat gravida turpis. Aenean nec scelerisque felis. Integer nec odio sed lorem mattis rhoncus quis quis nibh. Praesent non fringilla nisi. Duis porta placerat mattis. Aenean in mollis odio, at egestas massa. Quisque in lectus magna. Vestibulum vel faucibus massa, vel varius tortor. Maecenas et laoreet neque, ut semper neque. Suspendisse aliquet, nisl vel pharetra ultricies, elit felis molestie sem, ac scelerisque turpis tortor non lacus.
+            </div>
+        <div>
+            <a href="javascript:void(document.getElementById('test').style.color='blue')">Hacer el texto de color Azul</a>&nbsp;<br>
+            <a href="javascript:void(document.getElementById('test').style.color='red')">Hacerlo Rojo</a>&nbsp;<br>
+            <a href="javascript:void(document.getElementById('test').style.color='green')">Verde</a>&nbsp;<br>
+            <a href="javascript:void(document.getElementById('test').style.fontWeight='bold')">El texto en negrita</a>&nbsp;<br>
+            <a href="javascript:void(document.getElementById('test').style.backgroundColor='yellow')">El fondo amarillo</a>&nbsp;<br>
+            <a href="javascript:void(document.getElementById('test').style.visibility='hidden')">Ocultar texto</a></div>
+            <button type="button" class="btn tw" onclick="document.getElementById('test').style.left=0;document.getElementById('test').style.color='black';document.getElementById('test').style.fontWeight='normal';document.getElementById('test').style.backgroundColor='white';document.getElementById('test').style.visibility='visible'; return false;">RESET</button>
+          
+        </div>
+        </section>
 
         <!-- Contenido relacionado-->
         <aside>
@@ -84,11 +114,12 @@
                
         </footer>
         
-      <!--
+ 
         <script>
-            alert("Método #2: Desde Body");
-        </script>-->
+           alert("Método #2: Desde Body");
+        </script>
   <script src="script/script.js"></script>
+
 
  </script>
 </body>

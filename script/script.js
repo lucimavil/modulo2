@@ -1,21 +1,20 @@
 
 //ventana alerta 
-//alert("Método #3: Desde archivo externo");
+alert("Método #3: Desde archivo externo");
 
 
 // Comentario en línea 
+
 /*
-Comentario
+Comentarios
 multilínea
 */
-
-//document.write("Esto no funciona mientras esté comentado");
-/*
 
 
 
 // Mensajes en la consola
 // mensaje en el log
+/*
 console.log("Esto es un mensaje en el log");
 // error
 console.error("Esto es un error");
@@ -23,30 +22,29 @@ console.error("Esto es un error");
 console.info("Añade información a la consola");
 // warning
 console.warn("Envía un aviso");
-
 */
 
 //Las variables de tipo var, tienen un alcance de función y las variables let y const tienen ámbito de bloque
 /*
-nota = 5;
+var nota = 5; //5
 console.log(nota);
 
-nota++;
+nota++; //6
 console.log(nota);
 
-nota--;
+nota--; //5
 console.log(nota);
 
 if (nota < 4)
   console.log("insuficiente");
-  else
-  console.log("aprobado");
+ else
+  console.log("aprobado"); 
 
 
   if ((nota >= 5) && (nota<6)){
     console.log("Suficiente");
-  };
-*/
+  };*/
+
 
 //Alcance o scope de las variables
 if  (1 === 1) {
@@ -55,49 +53,54 @@ if  (1 === 1) {
 //console.log(bien) // let de bloque no definida
 
 //para solucionarlo
-/*
+
 let bien;
 if  (1 === 1) {
   bien = true;
 }
-console.log(bien)
-*/
+//console.log(bien)
 
+edad=30;
+estado=(edad>=18)?'adulto':'menor';
 
 // concatenacion
-/*resultado='Luciana';
-let frase = "Hola  " + resultado;
-console.log(frase);
-*/
+resultado='Luciana';
+let frase = "Hola  " +resultado +' !';
+//console.log(frase);
 
 
 //Cuadro de diálogo de confirmación
-/*var v = confirm("¿Quieres enviarlo?");
+/*
+var  v= confirm("¿Quieres enviarlo?");
 if ( v ) {
     document.write("Ok, gracias.");
 } else {
     document.write("Estaremos aquí para cuando te decidas ;)");
-}
-*/
+}*/
+//console.log(estado);
 
 /*funciones */
+
 function calcularAlgo(){
     console.log("Calculando...");
 
 }
-  calcularAlgo();
-  
- /* function aplicarDescuento(){
+//calcularAlgo();
+/*
+ function aplicarDescuento(){
     const descuento = 100 * 0.2; //undefined //No podemos acceder a la variable desde fuera de la función
-    //return descuento; //lo solucionamos 
+    return descuento; //lo solucionamos 
   }
+
+console.log(aplicarDescuento());
 */
 //Uso de argumentos en las funciones
-  function aplicarDescuento(precioProducto, desc){
+
+function aplicarDescuento(precioProducto, desc){
     const descuentoAplicado = precioProducto * (desc / 100);
     return descuentoAplicado;
-  }
-  //en consola aplicarDescuento(50, parseInt(prompt("Introduzca descuento")));
+ }
+//console.log(aplicarDescuento(50, parseInt(prompt("Introduzca descuento"))));
 
  // Valores por defecto en los parámetros de las funciones
  function diHola(nombre = 'tú'){
@@ -109,11 +112,14 @@ function calcularAlgo(){
     return "Hola " + nombre;
   } 
   //consola saludar('Diego');
-
+/*
+for(var i=0; i<10;i++){
+    console.log('Número: '+i);
+  }*/
 
   //Y vamos a seleccionarlo con un método JS que permite buscar por selector CSS:
 
-  const button = document.querySelector(".hazClic");
+const button = document.querySelector(".hazClic");
   //A continuación vamos a agregarle un evento de clic mediante el método addEventListener(),
   // el cual llama a otra función como callback.
   
@@ -136,9 +142,9 @@ function calcularAlgo(){
    parámetro. En el ejemplo, el primer párrafo.
   */
   const p = document.querySelector('p.ejemplo');
-  console.dir(p); //  todos los métodos y atributos disponibles.
-  console.log(p.textContent);//el contenido en texto
-  p.textContent = "nuevo contenido"; //lo actualizamos con un nuevo contenido
+console.dir(p); //  todos los métodos y atributos disponibles.
+//console.log(p.textContent);//el contenido en texto
+  //p.textContent = "nuevo contenido"; //lo actualizamos con un nuevo contenido
 
 
   //Si seleccionamos la imagen desde JS, podemos llamar al atributo classList para visualizar sus clases,
@@ -169,36 +175,40 @@ var cadena=new Array();
 //Importante recordar que comienza en 0
 cadena[0]="rojo";
 cadena[1]="amarillo";
-alert(cadena[1]);//La mostramos
+cadena[2]="verde";
+//alert(cadena[1]);//La mostramos
 //Segunda forma de declarar y asignar valores a Arrays
 var posts = ["Hola a todos!","Me encanta el riesgo"];
 
 //a continuación se muestra en la consola todo el Array y el número de elementos que tiene
-console.log(posts);
-console.log(posts.length);
+//console.log(posts);
+//console.log(posts.length);
 //Con push agregamos nuevo elemento
-posts.push("nuevo elemento");
-//Con Splice eliminamos elementos de un Array. Primer parámetro para inidcar a partir de dónde y el segundo para indicar el número de elementos a eliminar
-posts.splice(1,1);
+//posts.push("nuevo elemento");
+//Con Splice eliminamos elementos de un Array. Primer parámetro para inidcar a partir de dónde y
+// el segundo para indicar el número de elementos a eliminar
+//posts.splice(1,1);
 //Compruba cuál se ha eliminado mostrando de nuevo el Array
-console.log(posts);
-//También podemos agregar con splice, indicando que vamos a eliminar 0 elementos. Observa que se agrega en la posición indicada
-posts.splice(1,0,"Nuevo post");
-console.log(posts);
+//console.log(posts);
+//También podemos agregar con splice, indicando que vamos a eliminar 0 elementos. 
+//Observa que se agrega en la posición indicada
+//posts.splice(1,0,"Nuevo post");
+
 
 const gente = [
 	{nombre: 'Diego', edad: 30},
   {nombre: 'Toni', edad: 10},
   {nombre: 'Johana', edad: 20},
 ];
-//console.table(gente);
+console.table(gente);
 //Estructuras repetitvas
 
 /*¿Cómo se hace un forEach en JavaScript?
 forEach((value, i) => { console. log(value); }); 
 La variable i se incrementará automáticamente en cada iteracción del bucle. 
 */
-/*gente.forEach((persona,index) =>{
+
+gente.forEach((persona,index) =>{
 	console.groupCollapsed(`${persona.nombre}`);
   console.log(persona.edad);
   console.log("hola");
@@ -206,6 +216,4 @@ La variable i se incrementará automáticamente en cada iteracción del bucle.
   
 });
 console.log(gente[2].nombre);
-*/
-// while do while
-//switch//json
+
